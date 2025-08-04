@@ -1,0 +1,31 @@
+{
+  "name": "whatsapp-slack-bot",
+  "version": "1.0.0",
+  "description": "Bot para reenviar mensajes de Anafre de WhatsApp al Slack del equipo",
+  "main": "whatsapp-slack-bot.js",
+  "scripts": {
+    "start": "node whatsapp-slack-bot.js",
+    "server": "node slack-server.js",
+    "dev": "nodemon slack-server.js",
+    "test": "node whatsapp-slack-bot.js --test"
+  },
+  "dependencies": {
+    "puppeteer": "^21.5.0",
+    "node-cron": "^3.0.3",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "whatsapp",
+    "slack",
+    "automation",
+    "puppeteer"
+  ],
+  "author": "",
+  "license": "MIT"
+}
