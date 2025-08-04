@@ -44,13 +44,13 @@ class WhatsAppSlackBot {
         const browser = await puppeteer.launch({
             headless: this.headless,
             userDataDir: this.sessionPath,
+            executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
-                '--disable-dev-shm-usage',
-                '--disable-web-security',
-                '--disable-features=VizDisplayCompositor'
-            ]
+                '--disable-dev-shm-usage'
+            ],
+            timeout: 30000
         });
 
         const page = await browser.newPage();
